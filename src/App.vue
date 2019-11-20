@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-
     <el-container style="height: 1000px; border: 1px solid #eee">
-   <el-header style="text-align: right; font-size: 12px">
-          <el-dropdown>
+      <el-header style="text-align: Left; font-size: 20px">
+        <span>Form Generator</span>
+        <!-- <el-dropdown>
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>查看</el-dropdown-item>
@@ -11,26 +11,43 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>王小虎</span>
-        </el-header>
-          <el-container>
-      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <el-menu :default-openeds="['1']">
-          <el-submenu index="1">
-            <template slot="title">
-              <i class></i>Form 1022
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="1-1">Your details</el-menu-item>
-              <el-menu-item index="1-2">Other Applicants</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item index="1-3">Other Infomations</el-menu-item>
-          </el-submenu>
-        </el-menu>
-      </el-aside>
+        <span>王小虎</span>-->
+      </el-header>
+      <el-container>
+        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+          <el-menu
+            default-active="1-4-1"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            :collapse="isCollapse"
+          >
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title">Form 1022</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="1-1">Your Details</el-menu-item>
+                <el-menu-item index="1-2">Other Applicants</el-menu-item>
+                <el-menu-item index="1-3">Extra Infomations</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
 
-    
-     
+            <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title">Other Form</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="2-1">Your Details</el-menu-item>
+                <el-menu-item index="2-2">Other Applicants</el-menu-item>
+                <el-menu-item index="2-3">Extra Infomations</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+
+          </el-menu>
+        </el-aside>
 
         <el-main>
           <el-form ref="form" :model="form" label-width="80px">
@@ -91,9 +108,7 @@
 <script>
 export default {
   data() {
-    const item = {
-
-    };
+    const item = {};
     return {
       form: {
         name: "",
