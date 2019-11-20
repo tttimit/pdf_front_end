@@ -292,6 +292,9 @@ export default {
   methods: {
     onSubmit() {
       console.log("submit!");
+      this.$http.get('https://www.baidu.com')
+      .then(response => (console.log(response)))
+      .catch(error => (console.log(error)))
     }
   }
 };
