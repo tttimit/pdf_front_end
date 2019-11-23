@@ -1,11 +1,11 @@
 <template>
   <div id="app" style="padding-bottom: 50px">
     <el-container
-      style="max-width: 1000px; min-width: 600px; border: 1px solid #eee; justify: center;"
+      style="max-width: 1000px; min-width: 600px; border: 1px solid #eee; margin: auto;"
     >
       <el-header style="text-align: Left; font-size: 20px">
         <span>Form Generator</span>
-        <span style="margin-left: 20px">此Demo仅作功能演示之用，因时间仓促，样式未设置；输入内容合法性未进行检查。</span>
+        <span style="margin-left: 50px">This demo is only for demonstration.</span>
         <!-- <el-dropdown>
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
